@@ -1,0 +1,16 @@
+<div class="row-fluid">
+<div id="logo" class="span3"><h1><%= link_to "Fit Hive", root_path %></h1></div>
+<div id="login-menu" class="span3 offset5">
+  <% unless user_signed_in? %>
+    <div class="btn-group">
+      <%= link_to "Log In", new_user_session_path, :class => "btn" %>
+      <%= link_to "Sign Up", new_user_registration_path, :class => "btn" %>
+    </div>          
+  <% else %>
+    <div class="btn-group offset1"><!-- may need to be inched to the right 25px later -->
+      <%= link_to "Account", edit_user_registration_path, :class => "btn" %>
+      <%= link_to "Log out", destroy_user_session_path, :class => "btn" ,:method => 'delete' %>
+    </div>
+  <% end %>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="row-fluid">
+<div id="dashboard" class="span12">
+    <% if user_signed_in? %>
+     <div class="span2 user-avatar">
+       
+     </div>
+
+     <div class="span9"> 
+      <div id="dash-top" class="span9"><span class="name"><%= current_user.first_name %> <%= current_user.last_name %></span></div>
+
+      <div class="span9"><span class="goal"><%= current_user.goal %></span></div>
+      <div class="span2"><span class="mood">current mood</span></div>
+      <div class="span3"><span class="last-workout">Last Workout</span></div>
+      <div class="span3"><span class="last-run">Last run?</span></div>
+     
+   
+     </div> 
+    <% end %>
+</div>
+</div>

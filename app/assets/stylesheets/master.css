@@ -1,0 +1,24 @@
+body{background-color:#fff;}
+
+
+/* Custom classes*/
+.well {background-color: #000; color:#c6cddb;}
+.top{margin-top:-50px;}
+.notice{background-color:#f8fa98; color:#3c3c21; padding:3px;}
+.alert{background-color:#984848; color:#fff; padding:3px;}
+#logo{color:#fff; float:left;}
+
+#header{position:relative; background-color: #343a46; width:100%; top:-10px;}
+#header a{color:#fff;}
+
+#login-menu{position:relative; top:5px;text-align:right; float:right;}
+#login-menu a{color:#505050;}
+
+#dashboard{border-bottom:#a5a5a5 solid 1px; padding:3px;}
+#dash-control{background-color: #f7f7f7; padding:3px;}
+.name{font-size:2em; color:#888; font-family: Helvetica, Arial, serif; border-bottom:1px solid #eee;}
+.goal{position:relative; top:10px; font-size: 1.7em; font-family:Georgia, sans-serif;}
+.mood{position:relative; top:10px;}
+.last-workout{position:relative; top:10px;}
+.last-run{position:relative; top:10px;}
+.user-avatar{position:relative; background-color:#eee; width:200px; height:120px; left:-30px;}

@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+		<h1>So what are your goals?</h1>
+
+	<h2>and what are your current measurements?</h2>
+
+	<span><% unless current_user.last_weight.nil? %>
+		<%= current_user.last_weight %>
+	<% end %> from - <%= best_in_place @user, :weight %></span>
+
+	<span><%= best_in_place @user, :height %></span>
+<% end %>

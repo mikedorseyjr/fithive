@@ -1,0 +1,823 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Imag",
+				"ImageTk"
+			],
+			[
+				"bl",
+				"blog-title"
+			],
+			[
+				"gale",
+				"gallery-item-border"
+			],
+			[
+				"item",
+				"item-description"
+			],
+			[
+				"st",
+				"stylesheet_link_tag"
+			],
+			[
+				"link",
+				"link	link - alternate"
+			],
+			[
+				"Who",
+				"WhoKnew"
+			],
+			[
+				"han",
+				"handler"
+			],
+			[
+				"app",
+				"appendOrextend"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"Real",
+				"RealLife"
+			],
+			[
+				"object",
+				"object	object"
+			],
+			[
+				"val",
+				"validate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "class User\n  include Mongoid::Document\n\n  before_save :copy_to_last_weight\n  attr_accessible :nickname, :first_name, :last_name, :email, :weight, :height, :password, :password_confirmation, :remember_me\n  \n  # Include default devise modules. Others available are:\n  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable\n  devise :database_authenticatable, :registerable,\n         :recoverable, :rememberable, :trackable, :validatable\n\n\n  validates_presence_of          :nickname, :first_name, :last_name, :weight, :height, :goal\n  validates_uniqueness_of        :nickname, :email, :case_sensitive => false\n  ##  User additional fields\n  field :nickname,               :type => String\n  field :first_name,             :type => String\n  field :last_name,              :type => String\n  field :weight,                 :type => Integer\n  field :last_weight,            :type => Integer\n  field :height,                 :type => String\n\n  field :bodyfat,                :type => String\n  field :arm_measurement,        :type => String\n  field :waist,                  :type => String\n  field :leg,                    :type => String\n  field :goal,                   :type => String, :default => \"Lose Weight\"\n  field :trainer,                :type => Boolean, :default => \"false\"\n  field :trainer_moderater,      :type => Boolean, :default => \"false\"\n\n\n\n\n  ## Database authenticatable\n  field :email,                  :type => String, :null => false, :default => \"\"\n  field :encrypted_password,     :type => String, :null => false, :default => \"\"\n\n\n  ## Recoverable\n  field :reset_password_token,   :type => String\n  field :reset_password_sent_at, :type => Time\n\n\n  ## Rememberable\n  field :remember_created_at,    :type => Time\n\n\n  ## Trackable\n  field :sign_in_count,          :type => Integer, :default => 0\n  field :current_sign_in_at,     :type => Time\n\n  field :last_sign_in_at,        :type => Time\n  field :current_sign_in_ip,     :type => String\n  field :last_sign_in_ip,        :type => String\n\n  ## Encryptable\n  # field :password_salt, :type => String\n\n  ## Confirmable\n  # field :confirmation_token,   :type => String\n  # field :confirmed_at,         :type => Time\n  # field :confirmation_sent_at, :type => Time\n  # field :unconfirmed_email,    :type => String # Only if using reconfirmable\n\n  ## Lockable\n  # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts\n  # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both\n  # field :locked_at,       :type => Time\n\n  ## Token authenticatable\n  # field :authentication_token, :type => String\n  def self.find_by_nickname(nickname)\n    User.where(nickname = \"#{nickname}\")\n  end\n\n  def copy_to_last_weight \n    self.last_weight = weight\n  end\nend\n\n",
+			"file": "app/models/user.rb",
+			"file_size": 2819,
+			"file_write_time": 1336874807000000,
+			"settings":
+			{
+				"buffer_size": 2822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/_user_update.html.erb",
+			"settings":
+			{
+				"buffer_size": 325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1941,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/users.js.coffee",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 885,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"I",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 496.0
+	},
+	"console":
+	{
+		"height": 115.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_flash.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_dashboard.html.erb",
+		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/master.css",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_header.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_sidebar.html.erb",
+		"/Users/looopy/Highwind/fithive/Gemfile",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/views/users.js.coffee",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/application.js",
+		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/users.css.scss",
+		"/Users/looopy/Highwind/fithive/app/models/user.rb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/application.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/users/_user_update.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/main/index.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/users/update.html.erb",
+		"/Users/looopy/Highwind/fithive/config/routes.rb",
+		"/Users/looopy/Highwind/fithive/app/controllers/users_controller.rb",
+		"/Users/looopy/Desktop/menwhowanttodowhatmendo.txt",
+		"/Users/looopy/Highwind/fithive/app/views/users/show.html.erb",
+		"/Users/looopy/Desktop/Learning Folder/color_str.py",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/profiles/user.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/profiles/current_user.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/devise/registrations/edit.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/devise/registrations/new.html.erb",
+		"/Users/looopy/Highwind/fithive/app/models/profile.rb",
+		"/Users/looopy/Highwind/morning-fire-3011/static/base.css",
+		"/Users/looopy/Highwind/morning-fire-3011/templates/index.html",
+		"/Users/looopy/Highwind/morning-fire-3011/exampleapp.py",
+		"/Users/looopy/Highwind/morning-fire-3011/templates/garbage.html",
+		"/Users/looopy/Highwind/morning-fire-3011/templates/base.html",
+		"/Users/looopy/Desktop/IntroTornado/chapt3/index.html",
+		"/Users/looopy/Desktop/arcticbirds/birdwatching.py",
+		"/Users/looopy/Desktop/arcticbirds/birdwatching.txt",
+		"/Users/looopy/Desktop/IntroTornado/chapt3/main.py",
+		"/Users/looopy/Desktop/arcticbirds/listfordict.py",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/BracketHighlighter.sublime-settings",
+		"/Users/looopy/old development/Development/cpp_study/mongo/client/clientOnly.cpp",
+		"/Users/looopy/Highwind/socialsociety/src/main/scala/Universe/universe.scala",
+		"/Users/looopy/Highwind/socialsociety/src/main/scala/Universe/Discovery.scala",
+		"/Users/looopy/Highwind/socialsociety/src/main/scala/Server.scala",
+		"/Users/looopy/Highwind/socialsociety/src/main/scala/Society.scala",
+		"/Users/looopy/Desktop/event.scala",
+		"/Users/looopy/old development/Development/scala_study/dawn/blueeyes/project-0.7.x/build/CoverageProject.scala",
+		"/Users/looopy/old development/Development/scala_study/dawn/blueeyes/src/main/scala/blueeyes/core/http/CacheDirective.scala",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Pylinter/Pylinter.sublime-settings",
+		"/Users/looopy/Desktop/KingdomBit/app/views/home/_front-gallery.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/controllers/posts_controller.rb",
+		"/Users/looopy/Desktop/KingdomBit/Gemfile",
+		"/Users/looopy/Desktop/Think Complexity/Chapter 2 Graphs/Graph.py",
+		"/Users/looopy/Desktop/pacman.py",
+		"/Users/looopy/Desktop/KingdomBit/app/assets/stylesheets/master.css",
+		"/Users/looopy/Desktop/KingdomBit/app/views/layouts/application.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/assets/images/arrow.png",
+		"/Users/looopy/Desktop/KingdomBit/config/routes.rb",
+		"/Users/looopy/Desktop/KingdomBit/app/views/home/index.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/views/home/_posts.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/controllers/home_controller.rb",
+		"/Users/looopy/Desktop/KingdomBit/app/views/layouts/_header.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/views/layouts/_stylesheets.html.erb",
+		"/Users/looopy/Desktop/KingdomBit/app/controllers/application_controller.rb",
+		"/Users/looopy/Desktop/KingdomBit/app/assets/stylesheets/application.css",
+		"/Users/looopy/Desktop/KingdomBit/app/assets/javascripts/kingdom_bit.js.coffee",
+		"/Users/looopy/Desktop/KingdomBit/app/views/home/_posts.index.html",
+		"/Users/looopy/Development/python_study/reddit/r2/r2/models/bidding.py",
+		"/Users/looopy/Development/python_study/reddit/r2/r2/models/gold.py",
+		"/Users/looopy/Development/python_study/reddit/r2/r2/lib/base.py",
+		"/Users/looopy/Development/CloudHaskell/Remote/Closure.hs",
+		"/Users/looopy/Development/cpp_study/mongo/bson/bsondemo/bsondemo.cpp",
+		"/Users/looopy/codegarden/carbonish/app/controllers/posts_controller.rb",
+		"/Users/looopy/Development/scala_study/blueeyes/src/main/scala/blueeyes/core/http/HttpRequest.scala",
+		"/Users/looopy/codegarden/june/assets/js/pears.js",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/looopy/Desktop/IntroTornado/index.html",
+		"/Users/looopy/Development/python_study/reddit/r2/r2/controllers/ads.py",
+		"/Users/looopy/Desktop/IntroTornado/poemmaker.py",
+		"/Users/looopy/Desktop/IntroTornado/poem.html",
+		"/Users/looopy/Development/javascript_study/node_chat/server.js",
+		"/Users/looopy/Desktop/IntroTornado/poemmaker3.py",
+		"/Users/looopy/Development/python_study/tornado-blog/blog.py",
+		"/Users/looopy/Development/CloudHaskell/Remote/Process.hs",
+		"/Users/looopy/Development/HeroChat/src/com/herocraftonline/dthielke/herochat/HeroChatServerListener.java",
+		"/Users/looopy/dev/java/scan.java",
+		"/Users/looopy/Development/python_study/reddit/r2/r2/controllers/listingcontroller.py",
+		"/Users/looopy/codegarden/carbonish/app/views/layouts/shared/_post.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/posts/update.js.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/posts/edit.js.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/posts/_post_form.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/posts/_post.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/controllers/base_controller.rb",
+		"/Users/looopy/Development/ruby_study/govsgo/app/controllers/messages_controller.rb",
+		"/Users/looopy/Development/ruby_study/govsgo/app/views/games/_side.html.erb",
+		"/Users/looopy/Development/ruby_study/govsgo/app/views/users/edit.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/shared/_post_form.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/base/index.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/views/layouts/_header.html.erb",
+		"/Users/looopy/codegarden/carbonish/app/models/user.rb",
+		"/Users/looopy/codegarden/carbonish/app/models/interest.rb",
+		"/Users/looopy/codegarden/carbonish/app/models/posts.rb",
+		"/Users/looopy/codegarden/carbonish/app/assets/stylesheets/master.css",
+		"/Users/looopy/codegarden/carbonish/config/routes.rb",
+		"/Users/looopy/codegarden/carbonish/app/views/base/help.html.erb",
+		"/Users/looopy/codegarden/drivetrain/app/views/layouts/_header.html.erb",
+		"/Users/looopy/Development/ruby_study/govsgo/app/models/game.rb",
+		"/Users/looopy/codegarden/carbonish/app/views/layouts/application.html.erb",
+		"/Users/looopy/Development/scala_study/heyfuture.scala",
+		"/Users/looopy/codegarden/carbonish/app/assets/stylesheets/plugins/rtl/screen.css",
+		"/Users/looopy/Desktop/Toy.scala",
+		"/Users/looopy/Development/scala_study/london_calling_october/src/main/scala/code/snippet/EnterIt.scala",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"backend"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"https://github.com/ericmartel/Sublime-Text-2-Stackoverflow-Plugin"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 2822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/users/_user_update.html.erb",
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								545,
+								545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 146.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/users/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/views/users.js.coffee",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								714
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"g",
+				"Gemfile"
+			],
+			[
+				"",
+				"Gemfile"
+			],
+			[
+				"user",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"users",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"in",
+				"app/views/main/index.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"user.r",
+				"app/models/user.rb"
+			],
+			[
+				"ma",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"mas",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"inde",
+				"app/views/main/index.html.erb"
+			],
+			[
+				"us",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"u",
+				"app/models/user.rb"
+			],
+			[
+				"pro",
+				"app/models/profile.rb"
+			],
+			[
+				"cur",
+				"app/views/layouts/profiles/current_user.html.erb"
+			],
+			[
+				"mast",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"aapp",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"_p",
+				"app/views/home/_posts.html.erb"
+			],
+			[
+				"_po",
+				"app/views/home/_posts.html.erb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"hom",
+				"app/controllers/home_controller.rb"
+			],
+			[
+				"home.ht",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"home",
+				"app/controllers/home_controller.rb"
+			],
+			[
+				"a",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"application.ht",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"index.ht",
+				"/Users/looopy/Desktop/IntroTornado/chapt3/index.html"
+			],
+			[
+				"main.py",
+				"/Users/looopy/Desktop/IntroTornado/chapt3/main.py"
+			],
+			[
+				"lib/",
+				"r2/r2/lib/base.py"
+			],
+			[
+				"gol",
+				"r2/r2/models/gold.py"
+			],
+			[
+				"t",
+				"src/flask-lesscss/flaskext/lesscss.py"
+			],
+			[
+				"po",
+				"app/controllers/posts_controller.rb"
+			],
+			[
+				"_post",
+				"app/views/posts/_post.html.erb"
+			],
+			[
+				"pos",
+				"app/models/post.rb"
+			],
+			[
+				"base",
+				"app/controllers/base_controller.rb"
+			],
+			[
+				"ine",
+				"app/views/base/index.html.erb"
+			],
+			[
+				"application.html",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"view",
+				"app/views/games/_side.html.erb"
+			],
+			[
+				"con",
+				"app/controllers/messages_controller.rb"
+			],
+			[
+				"post",
+				"app/controllers/posts_controller.rb"
+			],
+			[
+				"mode",
+				"app/models/interest.rb"
+			],
+			[
+				"model",
+				"app/models/posts.rb"
+			],
+			[
+				"ba",
+				"app/controllers/base_controller.rb"
+			],
+			[
+				"m",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"h",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"he",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"head",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"mo",
+				"app/models/user.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 148.0,
+	"status_bar_visible": true
+}

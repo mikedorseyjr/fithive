@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+	<span><% unless current_user.last_weight.nil? %>
+		<%= current_user.last_weight %>
+	<% end %> from - <%= current_user.weight %></span>
+
+	<span><%= current_user.height %></span>
+<% end %>

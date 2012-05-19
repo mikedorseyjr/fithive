@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+<h1>Profile</h1>
+<div><%= current_user.nickname %></div>
+
+<div></div>
+<% else %>
+ok
+<% end %>
