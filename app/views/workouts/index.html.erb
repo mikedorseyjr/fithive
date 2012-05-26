@@ -1,0 +1,6 @@
+<p>Main</p>
+<% unless @workouts.empty? %>
+<% @workouts.each do |p| %>
+	<%= link_to "#{p.name}", workout_path(p.id) %><br/>
+<% end %>
+<% end %>

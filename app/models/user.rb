@@ -2,7 +2,8 @@ class User
   include Mongoid::Document
 
   before_save :copy_to_last_weight
-  attr_accessible :nickname, :first_name, :last_name, :email, :weight, :height, :password, :password_confirmation, :remember_me
+  attr_accessible :nickname, :first_name, :last_name, :email, :weight, :last_weight, :height, :password, :password_confirmation, :remember_me
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -28,7 +29,8 @@ class User
   field :trainer_moderater,      :type => Boolean, :default => "false"
 
 
-
+  ## Relationships
+  has_many :workouts
 
   ## Database authenticatable
   field :email,                  :type => String, :null => false, :default => ""
@@ -75,5 +77,6 @@ class User
   def copy_to_last_weight 
     self.last_weight = weight
   end
+    
 end
 

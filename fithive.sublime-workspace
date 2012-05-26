@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"javasc",
+				"javascript_include_tag"
+			],
+			[
+				"activi",
+				"activities"
+			],
+			[
+				"all",
+				"all	all? { |e| .. }"
+			],
+			[
+				"mo",
+				"movePlayer"
+			],
+			[
+				"COLOR_",
+				"COLOR_MAGENTA  (variable)"
+			],
+			[
+				"color",
+				"color_pair  (function)"
+			],
+			[
+				"co",
+				"color_pair  (function)"
+			],
+			[
+				"se",
+				"sets"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"work",
+				"workout_id"
+			],
+			[
+				"bac",
+				"background	background-color: hex"
+			],
+			[
 				"Imag",
 				"ImageTk"
 			],
@@ -60,21 +104,10 @@
 	"buffers":
 	[
 		{
-			"contents": "class User\n  include Mongoid::Document\n\n  before_save :copy_to_last_weight\n  attr_accessible :nickname, :first_name, :last_name, :email, :weight, :height, :password, :password_confirmation, :remember_me\n  \n  # Include default devise modules. Others available are:\n  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable\n  devise :database_authenticatable, :registerable,\n         :recoverable, :rememberable, :trackable, :validatable\n\n\n  validates_presence_of          :nickname, :first_name, :last_name, :weight, :height, :goal\n  validates_uniqueness_of        :nickname, :email, :case_sensitive => false\n  ##  User additional fields\n  field :nickname,               :type => String\n  field :first_name,             :type => String\n  field :last_name,              :type => String\n  field :weight,                 :type => Integer\n  field :last_weight,            :type => Integer\n  field :height,                 :type => String\n\n  field :bodyfat,                :type => String\n  field :arm_measurement,        :type => String\n  field :waist,                  :type => String\n  field :leg,                    :type => String\n  field :goal,                   :type => String, :default => \"Lose Weight\"\n  field :trainer,                :type => Boolean, :default => \"false\"\n  field :trainer_moderater,      :type => Boolean, :default => \"false\"\n\n\n\n\n  ## Database authenticatable\n  field :email,                  :type => String, :null => false, :default => \"\"\n  field :encrypted_password,     :type => String, :null => false, :default => \"\"\n\n\n  ## Recoverable\n  field :reset_password_token,   :type => String\n  field :reset_password_sent_at, :type => Time\n\n\n  ## Rememberable\n  field :remember_created_at,    :type => Time\n\n\n  ## Trackable\n  field :sign_in_count,          :type => Integer, :default => 0\n  field :current_sign_in_at,     :type => Time\n\n  field :last_sign_in_at,        :type => Time\n  field :current_sign_in_ip,     :type => String\n  field :last_sign_in_ip,        :type => String\n\n  ## Encryptable\n  # field :password_salt, :type => String\n\n  ## Confirmable\n  # field :confirmation_token,   :type => String\n  # field :confirmed_at,         :type => Time\n  # field :confirmation_sent_at, :type => Time\n  # field :unconfirmed_email,    :type => String # Only if using reconfirmable\n\n  ## Lockable\n  # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts\n  # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both\n  # field :locked_at,       :type => Time\n\n  ## Token authenticatable\n  # field :authentication_token, :type => String\n  def self.find_by_nickname(nickname)\n    User.where(nickname = \"#{nickname}\")\n  end\n\n  def copy_to_last_weight \n    self.last_weight = weight\n  end\nend\n\n",
-			"file": "app/models/user.rb",
-			"file_size": 2819,
-			"file_write_time": 1336874807000000,
+			"file": "app/models/workout.rb",
 			"settings":
 			{
-				"buffer_size": 2822,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/_user_update.html.erb",
-			"settings":
-			{
-				"buffer_size": 325,
+				"buffer_size": 861,
 				"line_ending": "Unix"
 			}
 		},
@@ -82,7 +115,7 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1941,
+				"buffer_size": 1964,
 				"line_ending": "Unix"
 			}
 		},
@@ -90,39 +123,39 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1432,
+				"buffer_size": 1462,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/users_controller.rb",
+			"file": "app/controllers/workouts_controller.rb",
 			"settings":
 			{
-				"buffer_size": 548,
+				"buffer_size": 737,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/users/show.html.erb",
+			"file": "app/views/workouts/new.html.erb",
 			"settings":
 			{
-				"buffer_size": 135,
+				"buffer_size": 379,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/views/users.js.coffee",
+			"file": "app/views/workouts/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 20,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/application.js",
+			"file": "app/views/workouts/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 885,
+				"buffer_size": 142,
 				"line_ending": "Unix"
 			}
 		}
@@ -195,26 +228,41 @@
 	},
 	"file_history":
 	[
+		"/Users/looopy/Highwind/fithive/app/controllers/activity_controller.rb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/application.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/index.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/show.html.erb",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/fithive.js.coffee",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/application.js",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/new.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/_activity_fields.html.erb",
+		"/Users/looopy/Highwind/fithive/config/initializers/mongoid-history.rb",
+		"/Users/looopy/Desktop/pacman.py",
+		"/Users/looopy/Downloads/tetris2850l.tar/tetris50l.py",
+		"/Users/looopy/Highwind/fithive/app/controllers/workouts_controller.rb",
+		"/Users/looopy/Highwind/fithive/app/models/workout.rb",
+		"/Users/looopy/Highwind/fithive/app/views/main/index.html.erb",
 		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/_flash.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_header.html.erb",
 		"/Users/looopy/Highwind/fithive/app/views/layouts/_dashboard.html.erb",
 		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/master.css",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/_header.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/_sidebar.html.erb",
-		"/Users/looopy/Highwind/fithive/Gemfile",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/views/main.js.coffee",
 		"/Users/looopy/Highwind/fithive/app/assets/javascripts/views/users.js.coffee",
-		"/Users/looopy/Highwind/fithive/app/assets/javascripts/application.js",
-		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/users.css.scss",
-		"/Users/looopy/Highwind/fithive/app/models/user.rb",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/application.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/users/_user_update.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/main/index.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/users/update.html.erb",
-		"/Users/looopy/Highwind/fithive/config/routes.rb",
-		"/Users/looopy/Highwind/fithive/app/controllers/users_controller.rb",
-		"/Users/looopy/Desktop/menwhowanttodowhatmendo.txt",
 		"/Users/looopy/Highwind/fithive/app/views/users/show.html.erb",
+		"/Users/looopy/Highwind/fithive/app/controllers/users_controller.rb",
+		"/Users/looopy/Highwind/fithive/Gemfile",
+		"/Users/looopy/Highwind/fithive/config/routes.rb",
+		"/Users/looopy/Highwind/fithive/app/views/users/_user_update.html.erb",
+		"/Users/looopy/Highwind/fithive/app/models/user.rb",
+		"/Users/looopy/Desktop/test.cpp",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/BracketHighlighter.sublime-settings",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_flash.html.erb",
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_sidebar.html.erb",
+		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/users.css.scss",
+		"/Users/looopy/Highwind/fithive/app/views/users/update.html.erb",
+		"/Users/looopy/Desktop/menwhowanttodowhatmendo.txt",
 		"/Users/looopy/Desktop/Learning Folder/color_str.py",
 		"/Users/looopy/Highwind/fithive/app/views/layouts/profiles/user.html.erb",
 		"/Users/looopy/Highwind/fithive/app/views/layouts/profiles/current_user.html.erb",
@@ -231,8 +279,6 @@
 		"/Users/looopy/Desktop/arcticbirds/birdwatching.txt",
 		"/Users/looopy/Desktop/IntroTornado/chapt3/main.py",
 		"/Users/looopy/Desktop/arcticbirds/listfordict.py",
-		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
-		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/BracketHighlighter.sublime-settings",
 		"/Users/looopy/old development/Development/cpp_study/mongo/client/clientOnly.cpp",
 		"/Users/looopy/Highwind/socialsociety/src/main/scala/Universe/universe.scala",
 		"/Users/looopy/Highwind/socialsociety/src/main/scala/Universe/Discovery.scala",
@@ -248,7 +294,6 @@
 		"/Users/looopy/Desktop/KingdomBit/app/controllers/posts_controller.rb",
 		"/Users/looopy/Desktop/KingdomBit/Gemfile",
 		"/Users/looopy/Desktop/Think Complexity/Chapter 2 Graphs/Graph.py",
-		"/Users/looopy/Desktop/pacman.py",
 		"/Users/looopy/Desktop/KingdomBit/app/assets/stylesheets/master.css",
 		"/Users/looopy/Desktop/KingdomBit/app/views/layouts/application.html.erb",
 		"/Users/looopy/Desktop/KingdomBit/app/assets/images/arrow.png",
@@ -317,7 +362,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 91.0,
 		"where_history":
 		[
 		]
@@ -327,6 +372,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sho",
 			"backend"
 		],
 		"highlight": true,
@@ -337,7 +383,7 @@
 		[
 			"https://github.com/ericmartel/Sublime-Text-2-Stackoverflow-Plugin"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -346,23 +392,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/user.rb",
+					"file": "app/models/workout.rb",
 					"settings":
 					{
-						"buffer_size": 2822,
+						"buffer_size": 861,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								208,
-								208
+								6,
+								13
 							]
 						],
 						"settings":
@@ -371,7 +417,7 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -379,23 +425,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/users/_user_update.html.erb",
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 1964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								86,
-								86
+								209,
+								209
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -405,25 +453,49 @@
 				},
 				{
 					"buffer": 2,
-					"file": "config/routes.rb",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 1941,
+						"buffer_size": 1462,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								110,
+								110
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/workouts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 737,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								500,
+								503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -432,52 +504,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 1432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								545,
-								545
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 146.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "app/controllers/users_controller.rb",
+					"file": "app/views/workouts/new.html.erb",
 					"settings":
 					{
-						"buffer_size": 548,
+						"buffer_size": 379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								4,
+								5
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -487,18 +532,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/views/users/show.html.erb",
+					"file": "app/views/workouts/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 135,
+						"buffer_size": 20,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								88,
-								88
+								0,
+								0
 							]
 						],
 						"settings":
@@ -513,49 +558,23 @@
 				},
 				{
 					"buffer": 6,
-					"file": "app/assets/javascripts/views/users.js.coffee",
+					"file": "app/views/workouts/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 142,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								110,
+								110
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/assets/javascripts/application.js",
-					"settings":
-					{
-						"buffer_size": 885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								714,
-								714
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -608,19 +627,127 @@
 		"selected_items":
 		[
 			[
-				"g",
-				"Gemfile"
+				"in",
+				"app/views/workouts/index.html.erb"
+			],
+			[
+				"show",
+				"app/views/workouts/show.html.erb"
+			],
+			[
+				"new",
+				"app/views/workouts/new.html.erb"
+			],
+			[
+				"work",
+				"app/controllers/workouts_controller.rb"
+			],
+			[
+				"ind",
+				"app/views/workouts/index.html.erb"
 			],
 			[
 				"",
-				"Gemfile"
+				"app/views/workouts/index.html.erb"
 			],
 			[
-				"user",
-				"app/controllers/users_controller.rb"
+				"wo",
+				"app/models/workout.rb"
+			],
+			[
+				"ac",
+				"app/controllers/activity_controller.rb"
 			],
 			[
 				"ge",
+				"Gemfile"
+			],
+			[
+				"apll",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"workout/",
+				"app/views/workouts/new.html.erb"
+			],
+			[
+				"app",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"fit",
+				"app/assets/javascripts/fithive.js.coffee"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"wor",
+				"app/models/workout.rb"
+			],
+			[
+				"w",
+				"app/models/workout.rb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"use",
+				"app/models/user.rb"
+			],
+			[
+				"mas",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"das",
+				"app/views/layouts/_dashboard.html.erb"
+			],
+			[
+				"user/",
+				"app/views/users/_user_update.html.erb"
+			],
+			[
+				"index.",
+				"app/views/main/index.html.erb"
+			],
+			[
+				"hea",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"mast",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"m",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"users/",
+				"app/views/users/_user_update.html.erb"
+			],
+			[
+				"inde",
+				"app/views/main/index.html.erb"
+			],
+			[
+				"_",
+				"app/views/layouts/_dashboard.html.erb"
+			],
+			[
+				"master",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"g",
 				"Gemfile"
 			],
 			[
@@ -630,10 +757,6 @@
 			[
 				"users",
 				"app/controllers/users_controller.rb"
-			],
-			[
-				"in",
-				"app/views/main/index.html.erb"
 			],
 			[
 				"gem",
@@ -646,18 +769,6 @@
 			[
 				"ma",
 				"app/assets/stylesheets/master.css"
-			],
-			[
-				"app",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"mas",
-				"app/assets/stylesheets/master.css"
-			],
-			[
-				"inde",
-				"app/views/main/index.html.erb"
 			],
 			[
 				"us",
@@ -676,10 +787,6 @@
 				"app/views/layouts/profiles/current_user.html.erb"
 			],
 			[
-				"mast",
-				"app/assets/stylesheets/master.css"
-			],
-			[
 				"aapp",
 				"app/views/layouts/application.html.erb"
 			],
@@ -690,10 +797,6 @@
 			[
 				"_po",
 				"app/views/home/_posts.html.erb"
-			],
-			[
-				"appl",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"hom",
@@ -784,10 +887,6 @@
 				"app/controllers/base_controller.rb"
 			],
 			[
-				"m",
-				"app/assets/stylesheets/master.css"
-			],
-			[
 				"h",
 				"app/views/layouts/_header.html.erb"
 			],
@@ -816,7 +915,7 @@
 	},
 	"show_minimap": false,
 	"show_open_files": true,
-	"show_tabs": false,
+	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 148.0,
 	"status_bar_visible": true

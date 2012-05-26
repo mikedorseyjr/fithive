@@ -6,7 +6,7 @@ body{background-color:#fff;}
 .top{margin-top:-50px;}
 .notice{background-color:#f8fa98; color:#3c3c21; padding:3px;}
 .alert{background-color:#984848; color:#fff; padding:3px;}
-#logo{color:#fff; float:left;}
+#logo{color:#fff; float:left; font-family: Proxima Nova;}
 
 #header{position:relative; background-color: #343a46; width:100%; top:-10px;}
 #header a{color:#fff;}
@@ -15,9 +15,10 @@ body{background-color:#fff;}
 #login-menu a{color:#505050;}
 
 #dashboard{border-bottom:#a5a5a5 solid 1px; padding:3px;}
+#dash-top{border-bottom:}
 #dash-control{background-color: #f7f7f7; padding:3px;}
-.name{font-size:2em; color:#888; font-family: Helvetica, Arial, serif; border-bottom:1px solid #eee;}
-.goal{position:relative; top:10px; font-size: 1.7em; font-family:Georgia, sans-serif;}
+.name{font-size:2em; color:#888; font-family: Proxima Nova, Helvetica, Arial, serif; border-bottom:1px solid #eee;}
+.goal{position:relative; top:10px; font-size: 1.7em; font-family:Georgia, sans-serif; font-style:italic;}
 .mood{position:relative; top:10px;}
 .last-workout{position:relative; top:10px;}
 .last-run{position:relative; top:10px;}

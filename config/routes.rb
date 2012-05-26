@@ -1,10 +1,16 @@
 Fithive::Application.routes.draw do
+  get "activity/create"
+
   root :to => "main#index"
 
 
   devise_for :users
   match 'users/update' => 'users#update'
   match 'profile/:nickname' => 'users#show', :as => :profile
+
+  resources :workouts do 
+    resources :activities
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -6,4 +6,4 @@ window.Fithive =
   init: -> alert 'Hello from Backbone!'
 
 $(document).ready ->
-  #Fithive.init()
+#  Fithive.init()

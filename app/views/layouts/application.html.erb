@@ -38,7 +38,7 @@
   <% if user_signed_in? %>
   <div class="row-fluid">
   <div id="dash-control" class="span12">
-  Create workout
+  <%= link_to "+ Create Workout", new_workout_path %>
   </div><!-- /profile-header -->
 </div>
   <% end %>
@@ -59,6 +59,7 @@
   <!-- Javascripts
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  <%= javascript_include_tag :cocoon %>
   <%= javascript_include_tag "application" %>
 
   </body>

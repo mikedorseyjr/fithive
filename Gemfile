@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'backbone-on-rails'
 gem 'jquery-rails'
+gem 'formtastic'
+gem 'cocoon'
 
 # gem 'best_in_place_mongoid'
 # Bundle edge Rails instead:

@@ -1,0 +1,7 @@
+<%=	 @workout.name %>
+
+<% @workout.activities.each do |activity| %>
+	<%= activity.name %>
+	<%= activity.reps %>
+	<%= activity.sets %>	
+<% end %>
