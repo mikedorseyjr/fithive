@@ -2,8 +2,8 @@ Fithive::Application.routes.draw do
   get "activity/create"
 
   root :to => "main#index"
-
-
+  resources :workouts
+  resources :routines
   devise_for :users
   match 'users/update' => 'users#update'
   match 'profile/:nickname' => 'users#show', :as => :profile

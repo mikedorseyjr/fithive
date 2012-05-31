@@ -1,14 +1,15 @@
 <div class="span6">	
-<%= semantic_fields_for :workouts do |f| %>
-	<%= f.inputs "Workout" do %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
+<%= f.semantic_fields_for :workout do |workout| %>
+	<%= workout.inputs "Workout" do %>
+		<%= workout.label :name %>
+		<%= workout.text_field :name %>
 	<% end %>
 	<div id="add-activities" class="">	
-		<%= f.semantic_fields_for :activities do |activity| %>
+		<%= workout.semantic_fields_for :activities do |activity| %>
 			<%= render 'workouts/activity_fields', :f => activity %>
 		<% end %>
-		<%= link_to_add_association 'add activity', f, :activities %>
+		<%= link_to_add_association 'add activity', f, :activities, :partial =>'workouts/activity_fields' %>
+	
 	</div>
 	<div >
 	<%= f.submit %>
