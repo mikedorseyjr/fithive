@@ -1,12 +1,12 @@
 <div class="span6">	
-<%= semantic_form_for @workout do |f| %>
+<%= semantic_fields_for :workouts do |f| %>
 	<%= f.inputs "Workout" do %>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	<% end %>
 	<div id="add-activities" class="">	
 		<%= f.semantic_fields_for :activities do |activity| %>
-			<%= render 'activity_fields', :f => activity %>
+			<%= render 'workouts/activity_fields', :f => activity %>
 		<% end %>
 		<%= link_to_add_association 'add activity', f, :activities %>
 	</div>

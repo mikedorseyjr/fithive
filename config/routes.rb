@@ -8,8 +8,10 @@ Fithive::Application.routes.draw do
   match 'users/update' => 'users#update'
   match 'profile/:nickname' => 'users#show', :as => :profile
 
-  resources :workouts do 
-    resources :activities
+  resources :routines do
+    resources :workouts do 
+      resources :activities
+    end
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

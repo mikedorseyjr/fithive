@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ac",
+				"activity"
+			],
+			[
 				"javasc",
 				"javascript_include_tag"
 			],
@@ -103,62 +107,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/models/workout.rb",
-			"settings":
-			{
-				"buffer_size": 861,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1964,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 1462,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/workouts_controller.rb",
-			"settings":
-			{
-				"buffer_size": 737,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/workouts/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 379,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/workouts/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 20,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/workouts/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 142,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -228,32 +176,34 @@
 	},
 	"file_history":
 	[
-		"/Users/looopy/Highwind/fithive/app/controllers/activity_controller.rb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_dashboard.html.erb",
+		"/Users/looopy/Highwind/fithive/app/models/workout.rb",
+		"/Users/looopy/Highwind/fithive/app/views/routines/new.html.erb",
+		"/Users/looopy/Highwind/fithive/app/controllers/routines_controller.rb",
+		"/Users/looopy/Highwind/fithive/config/routes.rb",
+		"/Users/looopy/Highwind/fithive/Gemfile",
 		"/Users/looopy/Highwind/fithive/app/views/layouts/application.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/workouts/index.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/workouts/show.html.erb",
-		"/Users/looopy/Highwind/fithive/app/assets/javascripts/fithive.js.coffee",
-		"/Users/looopy/Highwind/fithive/app/assets/javascripts/application.js",
+		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/master.css",
+		"/Users/looopy/Highwind/fithive/app/models/user.rb",
 		"/Users/looopy/Highwind/fithive/app/views/workouts/new.html.erb",
 		"/Users/looopy/Highwind/fithive/app/views/workouts/_activity_fields.html.erb",
+		"/Users/looopy/Highwind/fithive/app/controllers/activity_controller.rb",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/index.html.erb",
+		"/Users/looopy/Highwind/fithive/app/views/workouts/show.html.erb",
+		"/Users/looopy/Highwind/fithive/app/controllers/workouts_controller.rb",
+		"/Users/looopy/Highwind/fithive/app/views/layouts/_header.html.erb",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/fithive.js.coffee",
+		"/Users/looopy/Highwind/fithive/app/assets/javascripts/application.js",
 		"/Users/looopy/Highwind/fithive/config/initializers/mongoid-history.rb",
 		"/Users/looopy/Desktop/pacman.py",
 		"/Users/looopy/Downloads/tetris2850l.tar/tetris50l.py",
-		"/Users/looopy/Highwind/fithive/app/controllers/workouts_controller.rb",
-		"/Users/looopy/Highwind/fithive/app/models/workout.rb",
 		"/Users/looopy/Highwind/fithive/app/views/main/index.html.erb",
 		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/_header.html.erb",
-		"/Users/looopy/Highwind/fithive/app/views/layouts/_dashboard.html.erb",
-		"/Users/looopy/Highwind/fithive/app/assets/stylesheets/master.css",
 		"/Users/looopy/Highwind/fithive/app/assets/javascripts/views/main.js.coffee",
 		"/Users/looopy/Highwind/fithive/app/assets/javascripts/views/users.js.coffee",
 		"/Users/looopy/Highwind/fithive/app/views/users/show.html.erb",
 		"/Users/looopy/Highwind/fithive/app/controllers/users_controller.rb",
-		"/Users/looopy/Highwind/fithive/Gemfile",
-		"/Users/looopy/Highwind/fithive/config/routes.rb",
 		"/Users/looopy/Highwind/fithive/app/views/users/_user_update.html.erb",
-		"/Users/looopy/Highwind/fithive/app/models/user.rb",
 		"/Users/looopy/Desktop/test.cpp",
 		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
 		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/BracketHighlighter.sublime-settings",
@@ -353,8 +303,7 @@
 		"/Users/looopy/codegarden/carbonish/app/assets/stylesheets/plugins/rtl/screen.css",
 		"/Users/looopy/Desktop/Toy.scala",
 		"/Users/looopy/Development/scala_study/london_calling_october/src/main/scala/code/snippet/EnterIt.scala",
-		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
-		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings"
+		"/Users/looopy/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings"
 	],
 	"find":
 	{
@@ -362,7 +311,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 91.0,
+		"height": 0.0,
 		"where_history":
 		[
 		]
@@ -392,196 +341,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/models/workout.rb",
-					"settings":
-					{
-						"buffer_size": 861,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								13
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 1964,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								209,
-								209
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 1462,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								110,
-								110
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/workouts_controller.rb",
-					"settings":
-					{
-						"buffer_size": 737,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								500,
-								503
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/workouts/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 379,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4,
-								5
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/workouts/show.html.erb",
-					"settings":
-					{
-						"buffer_size": 20,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/workouts/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 142,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								110,
-								110
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -627,36 +388,96 @@
 		"selected_items":
 		[
 			[
-				"in",
-				"app/views/workouts/index.html.erb"
+				"routin",
+				"app/controllers/routines_controller.rb"
 			],
 			[
-				"show",
-				"app/views/workouts/show.html.erb"
+				"gem",
+				"Gemfile"
 			],
 			[
 				"new",
 				"app/views/workouts/new.html.erb"
 			],
 			[
-				"work",
-				"app/controllers/workouts_controller.rb"
-			],
-			[
-				"ind",
-				"app/views/workouts/index.html.erb"
+				"r",
+				"config/routes.rb"
 			],
 			[
 				"",
-				"app/views/workouts/index.html.erb"
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"dash",
+				"app/views/layouts/_dashboard.html.erb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"mas",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"work",
+				"app/models/workout.rb"
+			],
+			[
+				"das",
+				"app/views/layouts/_dashboard.html.erb"
+			],
+			[
+				"hea",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"act",
+				"app/views/workouts/_activity_fields.html.erb"
+			],
+			[
+				"mast",
+				"app/assets/stylesheets/master.css"
+			],
+			[
+				"wor",
+				"app/models/workout.rb"
+			],
+			[
+				"master",
+				"app/assets/stylesheets/master.css"
 			],
 			[
 				"wo",
-				"app/models/workout.rb"
+				"app/controllers/workouts_controller.rb"
 			],
 			[
 				"ac",
 				"app/controllers/activity_controller.rb"
+			],
+			[
+				"show",
+				"app/views/workouts/show.html.erb"
+			],
+			[
+				"workout/new",
+				"app/views/workouts/new.html.erb"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"in",
+				"app/views/workouts/index.html.erb"
+			],
+			[
+				"ind",
+				"app/views/workouts/index.html.erb"
 			],
 			[
 				"ge",
@@ -671,10 +492,6 @@
 				"app/views/workouts/new.html.erb"
 			],
 			[
-				"app",
-				"app/assets/javascripts/application.js"
-			],
-			[
 				"fit",
 				"app/assets/javascripts/fithive.js.coffee"
 			],
@@ -683,32 +500,12 @@
 				"config/routes.rb"
 			],
 			[
-				"wor",
-				"app/models/workout.rb"
-			],
-			[
 				"w",
 				"app/models/workout.rb"
 			],
 			[
-				"appl",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"user",
-				"app/models/user.rb"
-			],
-			[
 				"use",
 				"app/models/user.rb"
-			],
-			[
-				"mas",
-				"app/assets/stylesheets/master.css"
-			],
-			[
-				"das",
-				"app/views/layouts/_dashboard.html.erb"
 			],
 			[
 				"user/",
@@ -717,14 +514,6 @@
 			[
 				"index.",
 				"app/views/main/index.html.erb"
-			],
-			[
-				"hea",
-				"app/views/layouts/_header.html.erb"
-			],
-			[
-				"mast",
-				"app/assets/stylesheets/master.css"
 			],
 			[
 				"m",
@@ -743,10 +532,6 @@
 				"app/views/layouts/_dashboard.html.erb"
 			],
 			[
-				"master",
-				"app/assets/stylesheets/master.css"
-			],
-			[
 				"g",
 				"Gemfile"
 			],
@@ -757,10 +542,6 @@
 			[
 				"users",
 				"app/controllers/users_controller.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"user.r",

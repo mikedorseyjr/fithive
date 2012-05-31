@@ -16,21 +16,30 @@ class User
   field :nickname,               :type => String
   field :first_name,             :type => String
   field :last_name,              :type => String
+  field :website,                :type => String
+
   field :weight,                 :type => Integer
   field :last_weight,            :type => Integer
   field :height,                 :type => String
-
   field :bodyfat,                :type => String
-  field :arm_measurement,        :type => String
+  field :right_arm,              :type => Float
+  field :left_arm,               :type => Float
   field :waist,                  :type => String
-  field :leg,                    :type => String
+  field :right_leg,              :type => String
+  field :left_leg,               :type => String
+
   field :goal,                   :type => String, :default => "Lose Weight"
+
+  ## trainer id - client enters trainers ID and gets drawn into the trainers group
   field :trainer,                :type => Boolean, :default => "false"
   field :trainer_moderater,      :type => Boolean, :default => "false"
 
 
   ## Relationships
+  has_many :routines
   has_many :workouts
+
+  embeds_many :conditions
 
   ## Database authenticatable
   field :email,                  :type => String, :null => false, :default => ""
@@ -78,5 +87,13 @@ class User
     self.last_weight = weight
   end
     
+end
+
+class  Condition
+  include Mongoid::Document
+  field :condition, :type => String
+
+  ## Relationships
+  embedded_in :user
 end
 

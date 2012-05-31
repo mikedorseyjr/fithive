@@ -1,0 +1,38 @@
+
+
+<div class="span8">
+<%= semantic_fields_for @routine do |f| %>
+	<%= f.inputs "Routine" do %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+
+		<%= f.label :level %>
+		<%= f.text_field :level %>
+
+		<%= f.label "Number of days" %>
+		<%= f.text_field :day_count %>
+
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+
+		<%= f.label :start_date %>
+		<%= f.date_select :start_date %>
+
+		<%= f.label :end_date %>
+		<%= f.date_select :end_date %>
+
+		<%= f.label :completed %>
+		<%= f.check_box :completed %>
+	<% end %>	
+	<div id="add-workouts" class="">
+		<%= f.semantic_fields_for :workouts do |workout| %>
+		<%= render 'workouts/workout_fields', :f => workout %>	
+		<% end %>
+	<%= link_to_add_association 'add workout', f, :workouts, :partial => 'workouts/workout_fields' %>
+
+	</div><!-- /add-workouts -->
+<% end %>
+</div>
+
+
+

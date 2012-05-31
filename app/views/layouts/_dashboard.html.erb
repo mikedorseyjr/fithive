@@ -1,20 +1,27 @@
+<% if user_signed_in? %>
+
 <div class="row-fluid">
-<div id="dashboard" class="span12">
-    <% if user_signed_in? %>
-     <div class="span2 user-avatar">
-       
-     </div>
+  <div id="dashboard" class="span12">
+      <div class="span2 user-avatar">avatar</div>
 
-     <div class="span9"> 
-      <div id="dash-top" class="span9"><span class="name"><%= current_user.first_name %> <%= current_user.last_name %></span></div>
+      <div class="row">
+        <div class="row span9">
+        <div id="dash-top" class="span9">
+        <span class="name"><%= current_user.first_name %> <%= current_user.last_name %></span>
+        </div>
+        </div>
+        
+        <div class="row span9">
+        <div class="span9"><span class="goal"><span class="goal-label">What's your goal?</span><%= current_user.goal %></span></div>
+        </div>
 
-      <div class="span9"><span class="goal"><%= current_user.goal %></span></div>
-      <div class="span2"><span class="mood">current mood</span></div>
-      <div class="span3"><span class="last-workout">Last Workout</span></div>
-      <div class="span3"><span class="last-run">Last run?</span></div>
-     
-   
-     </div> 
-    <% end %>
+      <div class="row span9 v-gap">
+        <div class="span2"><span class="current-workout"><span class="bright-label">Max-Out</span><br/>current routine</span></div>
+        <div class="span3"><span class="last-workout"><span class="bright-label">Yesterday</span><br/>Last Workout</span></div>
+        <div class="span3"><span class="last-run"><span class="bright-label">201</span><br/>Current weight</span></div>
+      </div>
+    </div>
+  
 </div>
 </div>
+<% end %>
