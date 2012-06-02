@@ -5,7 +5,8 @@ gem 'backbone-on-rails'
 gem 'jquery-rails'
 gem 'formtastic'
 gem 'cocoon'
-gem 'calendar_date_select'
+gem 'carrierwave'
+
 # gem 'best_in_place_mongoid'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

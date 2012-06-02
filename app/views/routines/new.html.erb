@@ -22,17 +22,18 @@
 		<%= f.date_select :end_date %>
 
 		<%= f.label :completed %>
-		<%= f.check_box :completed %>
+		<%= f.check_box :completed %><br/>
+
 	<% end %>	
-	<div id="add-workouts" class="">
+
+	<div id="add-workouts" class="nested-fields">
 		<%= f.semantic_fields_for :workouts do |workout| %>
 		<%= render 'workouts/workout_fields', :f => workout %>	
 		<% end %>
-	<%= link_to_add_association 'add workout', f, :workouts, :partial => 'workouts/workout_fields' %>
-
+		<%= link_to_add_association 'add workout', f, :workouts, :partial => 'workouts/workout_fields' %>
 	</div><!-- /add-workouts -->
-<% end %>
+
 </div>
 
-
+<% end %>
 
