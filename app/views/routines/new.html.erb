@@ -1,28 +1,47 @@
 
 
-<div class="span8">
+<div class="span12">
 <%= semantic_fields_for @routine do |f| %>
 	<%= f.inputs "Routine" do %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
+		<div class="row">
+			<div class="span4">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			</div>
+			<div class="span4">
+			<%= f.label :level %>
+			<%= f.text_field :level %>
+			</div>
+			<div class="span4">
+			<%= f.label "Number of days" %>
+			<%= f.text_field :day_count %>
+			</div>
+		</div>
 
-		<%= f.label :level %>
-		<%= f.text_field :level %>
+		<div class="row">
+			<div class="span12">
+			<%= f.label :description %>
+			<%= f.text_area :description, :rows => 6, :cols => 500, :class => "span8" %>
+			</div>
+		</div>
 
-		<%= f.label "Number of days" %>
-		<%= f.text_field :day_count %>
+		<div class="row">
+			<div class="span4">
+			<%= f.label :start_date %>
+			<%= f.date_select :start_date %>
+			</div>
+			<div class="span4">
+			<%= f.label :end_date %>
+			<%= f.date_select :end_date %>
+			</div>
+			<div class="span1">
+			<%= f.label :completed %>
+			<%= f.check_box :completed %>
+			</div>
+		</div>
+	</div>
 
-		<%= f.label :description %>
-		<%= f.text_field :description %>
 
-		<%= f.label :start_date %>
-		<%= f.date_select :start_date %>
-
-		<%= f.label :end_date %>
-		<%= f.date_select :end_date %>
-
-		<%= f.label :completed %>
-		<%= f.check_box :completed %><br/>
 
 	<% end %>	
 
@@ -32,8 +51,8 @@
 		<% end %>
 		<%= link_to_add_association 'add workout', f, :workouts, :partial => 'workouts/workout_fields' %>
 	</div><!-- /add-workouts -->
+<% end %>
 
 </div>
 
-<% end %>
 
